@@ -12,7 +12,9 @@
 
 <script src="//use.typekit.net/kqw1rgy.js"></script>
 <script>try{Typekit.load();}catch(e){}</script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://rawgithub.com/abduzeedo/ios7-blur-html5/master/js/StackBlur.js"></script>
+<script src="https://rawgithub.com/abduzeedo/ios7-blur-html5/master/js/html2canvas.js"></script>
 
 </head>
 
@@ -20,21 +22,32 @@
 
   <div class="container">
   
-  <div class='row'>
+ 
 
-      <div class="col-md-1">
+<nav class="navbar navbar-fixed-top menu">
+   <div class="container">
+      <div class='row'>
+
+          <div class="col-md-1">
           <a href="index.html">
             <img class="img-responsive" src="images/logo.png">
           </a>
       </div>
 
 
+
      <div class="col-md-6  pull-right text-right freight">
      <a href="music.html">Music</a> / <a href="videos.html">Videos</a> / <a href="jorunal.html">Journal</a> / <a href="vault.html">Vault</a>
     </div>
-  </div>
 
-  <div class="row dirty-south">
+      </div>
+    </div>  
+    </nav>
+
+<div class="glass"></div>
+
+
+  <div class="row three-o-five">
         <div class="col-md-5">
           <img class="img-responsive" src="http://3.bp.blogspot.com/-QgVOlN58zHw/VBSXv3rvsdI/AAAAAAAAOxI/x5XuHKUgV6Y/s1600/Alicia-Keys-Songs-In-a-Minor-Album-Cover.jpg"></div>
 
@@ -204,6 +217,50 @@
 
 
   <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'></script>
+
+<script>
+$(function () {
+    html2canvas($("body"), {
+        onrendered: function (canvas) {
+            $(".glass").append(canvas);
+            $("canvas").attr("id", "canvas");
+            stackBlurCanvasRGB(
+                'canvas',
+            0,
+            0,
+            $("canvas").width(),
+            $("canvas").height(),
+            20);
+        }
+    });
+    vv = setTimeout(function () {
+        $("header").show();
+        clearTimeout(vv);
+    }, 200);
+});
+
+$(window).scroll(function () {
+    $("canvas").css(
+        "-webkit-transform",
+        "translatey(-" + $(window).scrollTop() + "px)");
+});
+
+window.onresize = function () {
+    $("canvas").width($(window).width());
+};
+
+$(document).bind('touchmove', function () {
+    $("canvas").css(
+        "-webkit-transform",
+        "translatey(-" + $(window).scrollTop() + "px)");
+});
+
+$(document).bind('touchend', function () {
+    $("canvas").css(
+        "-webkit-transform",
+        "translatey(-" + $(window).scrollTop() + "px)");
+});
+</script>
 
 </body>
 
