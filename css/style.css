@@ -111,63 +111,6 @@ margin-top: 40px;
 
 
 
-/* "pull right to bleed image off page */
-
-.bleed {
-position: absolute;
-right: 0;
-padding-right: 0px;
-}
-
-
-/* makes center-block class super duper centered */
-
-
-.center-block {
-float: none;
-}
-
-
-
-/* for column content that needs to align bottom  */
-
-.row-full-height {
-    display: table;
-}
-
-.row-full-height [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: bottom;
-}
-
-
-
-/* for flush columns with no padding  */
-
-.no-gutter p{padding-right:15px;}
-
-.no-gutter [class*="col"] {
-  padding-left:0;
-    padding-right:0;
-}
-
-.no-gutter [class*="col"]:last-child {
-padding-right: 4px;
-}
-
-.no-gutter [class*="col"]:first-child {
-padding-left:; 4px;
-}
-
-/* center text verticaly via flexbox  */
-
-.vertical-center {
-  min-height: 100%;
-  min-height: 100vh; 
-  display: flex;
-  align-items: center;
-}
 
 
 
@@ -762,6 +705,69 @@ margin-bottom: 70px;
 width: 1000px;
 }
 }
+
+
+/* darby's lil helpers aka shabba shabba raaanx */
+
+
+/* "pull right to bleed image off page */
+
+.bleed {
+position: absolute;
+right: 0;
+padding-right: 0px;
+}
+
+
+/* makes center-block class super duper centered */
+
+
+.center-block {
+float: none;
+}
+
+
+
+/* for column content that needs to align bottom  */
+
+.row-full-height {
+    display: table;
+}
+
+.row-full-height [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+
+
+/* for flush columns with no padding  */
+
+.no-gutter p{padding-right:15px;}
+
+.no-gutter [class*="col"] {
+  padding-left:0;
+    padding-right:0;
+}
+
+.no-gutter [class*="col"]:last-child {
+padding-right: 4px;
+}
+
+.no-gutter [class*="col"]:first-child {
+padding-left:; 4px;
+}
+
+/* center text verticaly via flexbox  */
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+}
+
 
 /*! ak text under pic alt 
 
