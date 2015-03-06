@@ -349,6 +349,17 @@ line-height:2.8em;
 color:#C0B080;
 }
 
+/*! new ak home blocks text under pic */
+
+.caption {
+background-color: white;
+margin-left: 20px;
+margin-right: 20px;
+top: -27px;
+position: relative;
+padding: 4px;
+box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.17);
+}
 
 /*! ak dim blocks */
 
