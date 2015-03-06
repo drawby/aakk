@@ -4,9 +4,50 @@
 
 
 body {
-  padding-top: 70px;
+ 
   background-color:white;
   /* padding-bottom: 30px; */
+}
+
+a img:hover {
+box-shadow: 0px 0px 5px #ddd;
+margin-top: -5px;
+margin-bottom: 15px;
+-webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+transition: all .15s cubic-bezier(.33,.66,.66,1);
+-webkit-backface-visibility: hidden;
+-webkit-perspective: 1000px;
+-webkit-transform-style: preserve-3d;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+}
+
+.freight a{
+ font-family: "freight-big-pro";
+color: #ccc;
+text-transform: uppercase;
+font-size: 11px;
+padding-left: 10px;
+padding-right: 10px;
+vertical-align: middle;
+letter-spacing: 4px;
+}
+
+.freight a:last-child {
+padding-right: 0px;
+}
+
+.freight {
+  font-family: "freight-big-pro";
+  color: #eee;
+}
+
+.dirty-south{
+     padding-top: 30px;
+}
+
+.chopped-and-screwed{
+      padding-top: 70px;
 }
 
 .theme-dropdown .dropdown-menu {
